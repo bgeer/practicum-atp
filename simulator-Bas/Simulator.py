@@ -42,7 +42,7 @@ class Plant():
     def update_ph(self):
         #write simulated pH to OT3470 bus and correct register
         raw_ph = [ord(c) for c in str(self.ph)]
-        self.I2CBus.write(0x63, 0x0, raw_ph)
+        self.I2CBus.write(0x63, 0x01, raw_ph)
 
 
     def print_state(self):
